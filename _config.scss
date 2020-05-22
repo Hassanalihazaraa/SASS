@@ -1,0 +1,31 @@
+//variables
+$padding: ("red": 16px, "blue": 8px, "code-section": 1em 1.5em, "body": 0);
+$margin: ("margin": 16px, "margin-bottom": 1.6em,"body": 0);
+$color: ("background-color": #000, "text-color": #666, "body": #2748b3, "all-headings": #6B8EFF);
+$text-size: ("font-size": 15px, "line-height": 1.6);
+$section-width: ("code-width": 100%, "code-before-after": 40%);
+$font-family: ("font-family": monospace);
+$border: ("border": 1px solid #ddd);
+$float: ("code-before": left, "code-after": right);
+$display: ("article": flex, "code": block);
+$text-align: ("center": center);
+
+//box-shadow
+@mixin box-shadow {
+  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+}
+
+
+//warning messages
+.message,
+.success,
+.error,
+.warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #2748B3;
+  background-color: #000;
+  width: 100%
+}

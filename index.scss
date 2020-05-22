@@ -1,0 +1,61 @@
+@import "config";
+@import "utilities";
+
+
+body {
+  font: 100% "Space Mono", monospace;
+  color: map-get($color, "body");
+  margin: map-get($margin, "body");
+  padding: map-get($padding, "body");
+  background-color: map-get($color, "background-color");
+  background-image: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  background-attachment: fixed
+}
+
+a{
+  text-decoration: none;
+  padding-left: map-get($padding, "blue");
+
+  &:hover {
+    background-color: #cccccc;
+  }
+
+}
+
+h1,
+h2,
+h6 {
+  color: map-get($color, "all-headings");
+}
+
+h1 {
+  text-align: map-get($text-align, "center")
+}
+
+h6 {
+  text-align: map-get($text-align, "center");
+  font-size: 2em;
+  padding: map-get($padding, "blue")  * 2;
+  margin-bottom: 0px
+}
+
+.message {
+  @extend .message;
+}
+
+.success {
+  background-color: green;
+  @extend .success;
+}
+
+.error {
+  background-color: red;
+  @extend .error;
+}
+
+.warning {
+  background-color: orange;
+  @extend .warning;
+}

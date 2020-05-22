@@ -1,0 +1,51 @@
+@import "config-red";
+
+//article
+article {
+  display: map-get($display, "article");
+  flex-wrap: wrap;
+
+  section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px silver solid;
+    @include box-shadow;
+    padding: map-get($padding, "blue");
+    margin: map-get($margin, "margin");
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+
+    #selling-points {
+      flex-grow: 2;
+      flex-basis: 100%
+    }
+
+  }
+
+  code {
+    background: map-get($color, "background-color");
+    border: map-get($border, "border");
+    color: map-get($color, "text-color");
+    page-break-inside: avoid;
+    font-family: map-get($font-family, "monospace");
+    font-size: map-get($text-size, "font-size");
+    line-height: map-get($text-size, "line-height");
+    margin-bottom: map-get($margin, "margin-bottom");
+    max-width: map-get($section-width, "code-width");
+    overflow: auto;
+    padding: map-get($padding, "code-section");
+    display: map-get($display, "code");
+    word-wrap: break-word;
+
+    code.before {
+      float: map-get($float, "code-before");
+      width: map-get($section-width, "code-before-after");
+    }
+
+    code.after {
+      float: map-get($float, "code-after");
+      width: map-get($section-width, "code-before-after");
+    }
+  }
+}
